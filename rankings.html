@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eclipse Reads</title>
+
+<style>
+body{
+margin:0;
+background:#0b1020;
+color:white;
+font-family:Arial,sans-serif;
+}
+
+header{
+background:#141a35;
+padding:25px;
+text-align:center;
+font-size:40px;
+font-weight:bold;
+color:#9b6cff;
+box-shadow:0 0 20px #9b6cff;
+}
+
+.search{
+padding:20px;
+}
+
+.search input{
+width:100%;
+padding:15px;
+border:none;
+border-radius:12px;
+font-size:18px;
+box-sizing:border-box;
+}
+
+.section{
+padding:20px;
+}
+
+.section h2{
+color:#9b6cff;
+}
+
+.section a{
+color:#9b6cff;
+text-decoration:none;
+font-size:18px;
+}
+
+.books{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+}
+
+.book{
+background:#141a35;
+padding:15px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 0 15px rgba(155,108,255,.4);
+}
+
+.cover{
+height:220px;
+border-radius:15px;
+background:linear-gradient(135deg,#9b6cff,#5ec8ff);
+margin-bottom:10px;
+}
+
+.book h3{
+margin:10px 0;
+}
+
+.book a{
+display:inline-block;
+padding:10px 20px;
+background:#9b6cff;
+color:white;
+text-decoration:none;
+border-radius:10px;
+}
+
+.library{
+background:#141a35;
+padding:15px;
+border-radius:15px;
+margin-top:15px;
+}
+
+.library a{
+display:inline-block;
+margin-top:10px;
+padding:10px 20px;
+background:#9b6cff;
+color:white;
+text-decoration:none;
+border-radius:10px;
+}
+
+.nav{
+position:fixed;
+bottom:0;
+left:0;
+right:0;
+background:#141a35;
+display:flex;
+justify-content:space-around;
+padding:15px;
+}
+
+.nav a{
+color:white;
+text-decoration:none;
+font-size:18px;
+}
+
+.spacer{
+height:100px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+🌙 Eclipse Reads
+</header>
+
+<div class="search">
+<input id="search" placeholder="Search books..." onkeyup="searchBooks()">
+</div>
+
+<div class="section">
+<h2>🏆 Rankings</h2>
+<a href="rankings.html">View Top Books →</a>
+</div>
+
+<div class="section">
+<h2>Featured Books</h2>
+
+<div class="books">
+
+<div class="book">
+<div class="cover"></div>
+<h3>SPACIOUS</h3>
+<a href="spacious.html">Read</a>
+</div>
+
+<div class="book">
+<div class="cover"></div>
+<h3>Midnight Hearts</h3>
+<a href="#">Coming Soon</a>
+</div>
+
+<div class="book">
+<div class="cover"></div>
+<h3>Neon Love</h3>
+<a href="#">Coming Soon</a>
+</div>
+
+<div class="book">
+<div class="cover"></div>
+<h3>Falling Stars</h3>
+<a href="#">Coming Soon</a>
+</div>
+
+</div>
+</div>
+
+<div class="section">
+<h2>📚 Continue Reading</h2>
+
+<div class="library">
+<h3>SPACIOUS</h3>
+<p>Your currently available book.</p>
+<a href="spacious.html">Open Book</a>
+</div>
+
+</div>
+
+<div class="spacer"></div>
+
+<div class="nav">
+<a href="index.html">🏠 Home</a>
+<a href="library.html">📚 Library</a>
+<a href="upload.html">➕ Upload</a>
+<a href="profile.html">👤 Profile</a>
+</div>
+
+<script>
+function searchBooks(){
+let input=document.getElementById("search").value.toLowerCase();
+let books=document.querySelectorAll(".book");
+
+books.forEach(book=>{
+let title=book.innerText.toLowerCase();
+
+if(title.includes(input)){
+book.style.display="block";
+}else{
+book.style.display="none";
+}
+});
+}
+</script>
+
+</body>
+</html>
