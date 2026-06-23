@@ -1,62 +1,95 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Eclipse Reads</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
 body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#111827;
+background:#0b1020;
 color:white;
+font-family:Arial,sans-serif;
+margin:0;
 }
 
 header{
+background:#121a35;
 padding:20px;
-font-size:32px;
+font-size:28px;
 font-weight:bold;
+color:#9b5cff;
+text-align:center;
+box-shadow:0 0 20px #9b5cff;
 }
 
 .search{
-padding:0 20px 20px;
+padding:15px;
 }
 
 .search input{
 width:100%;
 padding:12px;
 border:none;
-border-radius:12px;
+border-radius:10px;
 font-size:16px;
 }
 
 .section{
-padding:20px;
+padding:15px;
+}
+
+.section h2{
+color:#9b5cff;
+}
+
+.books{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
 }
 
 .book{
-background:#1f2937;
+background:#151d3d;
 border-radius:15px;
-padding:15px;
-margin-bottom:15px;
+padding:10px;
+text-align:center;
+box-shadow:0 0 10px rgba(155,92,255,.4);
 }
 
-.book img{
+.cover{
+height:180px;
+border-radius:10px;
+background:linear-gradient(135deg,#9b5cff,#00e5ff);
+margin-bottom:10px;
+}
+
+button{
+background:#9b5cff;
+border:none;
+padding:10px;
+border-radius:10px;
+color:white;
+margin-top:5px;
+}
+
+.nav{
+position:fixed;
+bottom:0;
 width:100%;
-border-radius:12px;
+background:#121a35;
+display:flex;
+justify-content:space-around;
+padding:15px 0;
 }
 
-.book h2{
-margin-top:10px;
-}
-
-.button{
-display:inline-block;
-padding:10px 20px;
-background:#3b82f6;
+.nav a{
 color:white;
 text-decoration:none;
-border-radius:10px;
+}
+
+.spacer{
+height:80px;
 }
 </style>
 </head>
@@ -68,22 +101,65 @@ border-radius:10px;
 </header>
 
 <div class="search">
-<input placeholder="Search books...">
+<input type="text" placeholder="Search books...">
 </div>
 
 <div class="section">
-<h1>Featured</h1>
+<h2>Featured Books</h2>
+
+<div class="books">
 
 <div class="book">
-<img src="https://picsum.photos/500/700" alt="cover">
-<h2>Spacious</h2>
-<p>Do-hyun hated slow nights. Especially when they gave him time to think about Seo-yul.</p>
-
-<a class="button" href="#">
-Start Reading
-</a>
+<div class="cover"></div>
+<h3>SPACIOUS</h3>
+<button>Read</button>
 </div>
 
+<div class="book">
+<div class="cover"></div>
+<h3>Midnight Hearts</h3>
+<button>Read</button>
+</div>
+
+<div class="book">
+<div class="cover"></div>
+<h3>Moonlit Promises</h3>
+<button>Read</button>
+</div>
+
+<div class="book">
+<div class="cover"></div>
+<h3>Eternal Winter</h3>
+<button>Read</button>
+</div>
+
+<div class="book">
+<div class="cover"></div>
+<h3>Neon Love</h3>
+<button>Read</button>
+</div>
+
+<div class="book">
+<div class="cover"></div>
+<h3>Falling Stars</h3>
+<button>Read</button>
+</div>
+
+</div>
+</div>
+
+<div class="section">
+<h2>Your Library</h2>
+<p>No saved books yet.</p>
+</div>
+
+<div class="spacer"></div>
+
+<div class="nav">
+<a href="#">🏠 Home</a>
+<a href="#">📚 Library</a>
+<a href="#">➕ Upload</a>
+<a href="#">👤 Profile</a>
 </div>
 
 </body>
