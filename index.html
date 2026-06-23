@@ -2,7 +2,6 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Eclipse Reads</title>
 
 <style>
@@ -14,82 +13,84 @@ margin:0;
 }
 
 header{
-background:#121a35;
-padding:20px;
-font-size:28px;
+background:#141a35;
+padding:25px;
+font-size:42px;
 font-weight:bold;
-color:#9b5cff;
 text-align:center;
-box-shadow:0 0 20px #9b5cff;
+color:#9b6cff;
+box-shadow:0 0 20px #9b6cff;
 }
 
 .search{
-padding:15px;
+padding:20px;
 }
 
 .search input{
 width:100%;
-padding:12px;
+padding:15px;
 border:none;
-border-radius:10px;
-font-size:16px;
+border-radius:12px;
+font-size:18px;
 }
 
 .section{
-padding:15px;
-}
-
-.section h2{
-color:#9b5cff;
+padding:20px;
 }
 
 .books{
 display:grid;
 grid-template-columns:repeat(2,1fr);
-gap:15px;
+gap:20px;
 }
 
 .book{
-background:#151d3d;
-border-radius:15px;
-padding:10px;
+background:#141a35;
+padding:15px;
+border-radius:20px;
 text-align:center;
-box-shadow:0 0 10px rgba(155,92,255,.4);
+box-shadow:0 0 15px rgba(155,108,255,.4);
 }
 
 .cover{
-height:180px;
-border-radius:10px;
-background:linear-gradient(135deg,#9b5cff,#00e5ff);
+height:220px;
+border-radius:15px;
+background:linear-gradient(135deg,#9b6cff,#5ec8ff);
 margin-bottom:10px;
 }
 
-button{
-background:#9b5cff;
-border:none;
-padding:10px;
-border-radius:10px;
+.book h3{
+margin:10px 0;
+}
+
+.book a{
+display:inline-block;
+padding:10px 20px;
+background:#9b6cff;
 color:white;
-margin-top:5px;
+text-decoration:none;
+border-radius:10px;
 }
 
 .nav{
 position:fixed;
 bottom:0;
-width:100%;
-background:#121a35;
+left:0;
+right:0;
+background:#141a35;
 display:flex;
 justify-content:space-around;
-padding:15px 0;
+padding:15px;
 }
 
 .nav a{
 color:white;
 text-decoration:none;
+font-size:18px;
 }
 
 .spacer{
-height:80px;
+height:100px;
 }
 </style>
 </head>
@@ -101,7 +102,7 @@ height:80px;
 </header>
 
 <div class="search">
-<input type="text" placeholder="Search books...">
+<input placeholder="Search books...">
 </div>
 
 <div class="section">
@@ -112,37 +113,25 @@ height:80px;
 <div class="book">
 <div class="cover"></div>
 <h3>SPACIOUS</h3>
-<button>Read</button>
+<a href="spacious.html">Read</a>
 </div>
 
 <div class="book">
 <div class="cover"></div>
 <h3>Midnight Hearts</h3>
-<button>Read</button>
-</div>
-
-<div class="book">
-<div class="cover"></div>
-<h3>Moonlit Promises</h3>
-<button>Read</button>
-</div>
-
-<div class="book">
-<div class="cover"></div>
-<h3>Eternal Winter</h3>
-<button>Read</button>
+<a href="#">Coming Soon</a>
 </div>
 
 <div class="book">
 <div class="cover"></div>
 <h3>Neon Love</h3>
-<button>Read</button>
+<a href="#">Coming Soon</a>
 </div>
 
 <div class="book">
 <div class="cover"></div>
 <h3>Falling Stars</h3>
-<button>Read</button>
+<a href="#">Coming Soon</a>
 </div>
 
 </div>
@@ -156,10 +145,10 @@ height:80px;
 <div class="spacer"></div>
 
 <div class="nav">
-<a href="#">🏠 Home</a>
-<a href="#">📚 Library</a>
-<a href="#">➕ Upload</a>
-<a href="#">👤 Profile</a>
+<a href="index.html">🏠 Home</a>
+<a href="library.html">📚 Library</a>
+<a href="upload.html">➕ Upload</a>
+<a href="profile.html">👤 Profile</a>
 </div>
 
 </body>
