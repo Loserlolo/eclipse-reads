@@ -6,18 +6,18 @@
 
 <style>
 body{
+margin:0;
 background:#0b1020;
 color:white;
 font-family:Arial,sans-serif;
-margin:0;
 }
 
 header{
 background:#141a35;
 padding:25px;
-font-size:42px;
-font-weight:bold;
 text-align:center;
+font-size:40px;
+font-weight:bold;
 color:#9b6cff;
 box-shadow:0 0 20px #9b6cff;
 }
@@ -32,10 +32,15 @@ padding:15px;
 border:none;
 border-radius:12px;
 font-size:18px;
+box-sizing:border-box;
 }
 
 .section{
 padding:20px;
+}
+
+.section h2{
+color:#9b6cff;
 }
 
 .books{
@@ -65,6 +70,23 @@ margin:10px 0;
 
 .book a{
 display:inline-block;
+padding:10px 20px;
+background:#9b6cff;
+color:white;
+text-decoration:none;
+border-radius:10px;
+}
+
+.library{
+background:#141a35;
+padding:15px;
+border-radius:15px;
+margin-top:15px;
+}
+
+.library a{
+display:inline-block;
+margin-top:10px;
 padding:10px 20px;
 background:#9b6cff;
 color:white;
@@ -102,7 +124,7 @@ height:100px;
 </header>
 
 <div class="search">
-<input placeholder="Search books...">
+<input id="search" placeholder="Search books..." onkeyup="searchBooks()">
 </div>
 
 <div class="section">
@@ -138,8 +160,14 @@ height:100px;
 </div>
 
 <div class="section">
-<h2>Your Library</h2>
-<p>No saved books yet.</p>
+<h2>📚 Continue Reading</h2>
+
+<div class="library">
+<h3>SPACIOUS</h3>
+<p>Your currently available book.</p>
+<a href="spacious.html">Open Book</a>
+</div>
+
 </div>
 
 <div class="spacer"></div>
@@ -150,6 +178,23 @@ height:100px;
 <a href="upload.html">➕ Upload</a>
 <a href="profile.html">👤 Profile</a>
 </div>
+
+<script>
+function searchBooks(){
+let input=document.getElementById("search").value.toLowerCase();
+let books=document.querySelectorAll(".book");
+
+books.forEach(book=>{
+let title=book.innerText.toLowerCase();
+
+if(title.includes(input)){
+book.style.display="block";
+}else{
+book.style.display="none";
+}
+});
+}
+</script>
 
 </body>
 </html>
