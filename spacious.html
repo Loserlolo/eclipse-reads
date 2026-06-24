@@ -138,6 +138,13 @@ Next Chapter →
 </button>
 </div>
 <div class="chapter">
+<h2>📚 Library</h2>
+<p id="libraryStatus">📖 Not In Library</p>
+<button onclick="addToLibrary()">
+📚 Add To Library
+</button>
+</div>
+<div class="chapter">
 <h2>💬 Comments</h2>
 <p><b>MoonReader:</b> Loved this chapter! 💜</p>
 <p><b>BookFan:</b> Can't wait for Chapter 2 😭</p>
@@ -160,6 +167,10 @@ Next Chapter →
 </button>
 </div>
 <script>
+function addToLibrary(){
+document.getElementById("libraryStatus").innerHTML =
+"✅ Added To Library";
+}
 function addLike(){
 let likes=document.getElementById("likes");
 let current=parseInt(likes.innerText.replace(/\D/g,''));
