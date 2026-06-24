@@ -93,87 +93,143 @@ Because silence always made him think.
 <p>
 And thinking always led back to Seo-yul.
 </p>
-</div>
-<div class="card">
-<h2>🔖 Bookmark</h2>
-<p id="bookmarkStatus">
-📖 No Bookmark Saved
+<p>
+The rain had started nearly an hour ago.
 </p>
-<button onclick="saveBookmark()">
-🔖 Save Bookmark
-</button>
+<p>
+At first it had been a light drizzle tapping softly against the café windows.
+Now it was pouring.
+</p>
+<p>
+Water raced down the glass in endless streams, blurring the city lights outside into streaks of gold, white, and blue.
+</p>
+<p>
+Most people hated rainy nights.
+</p>
+<p>
+Do-hyun preferred them.
+</p>
+<p>
+Rain kept people away.
+Rain made the streets quieter.
+Rain gave him an excuse to stay inside and pretend the rest of the world didn't exist.
+</p>
+<p>
+The clock above the register ticked loudly.
+</p>
+<p>
+Tick. Tick. Tick.
+</p>
+<p>
+Each second seemed to stretch longer than the last.
+</p>
+<p>
+Only two customers remained in the café.
+</p>
+<p>
+A college student asleep over an open textbook.
+</p>
+<p>
+And an exhausted office worker scrolling through his phone while nursing a coffee that had gone cold half an hour ago.
+</p>
+<p>
+Neither looked like they planned on talking.
+</p>
+<p>
+Fine by him.
+</p>
+<p>
+Do-hyun wiped down the counter for the third time.
+Then the fourth.
+Then the fifth.
+</p>
+<p>
+Anything to stay busy.
+Anything to avoid thinking.
+</p>
+<p>
+Unfortunately, thinking always found him anyway.
+</p>
+<p>
+Especially on nights like this.
+</p>
+<p>
+Especially when the rain sounded exactly like it had that night.
+</p>
+<p>
+The night he met Seo-yul.
+</p>
+<p>
+The bell above the entrance suddenly chimed.
+</p>
+<p>
+His heart skipped before he could stop it.
+</p>
+<p>
+The door slowly swung open.
+</p>
+<p>
+A rush of cool air swept through the café.
+</p>
+<p>
+Rain followed.
+</p>
+<p>
+Then the figure stepped into the light.
+</p>
+<p>
+Seo-yul.
+</p>
+<p>
+Of course it was Seo-yul.
+</p>
+<p>
+Standing there like he'd walked straight out of Do-hyun's thoughts.
+</p>
+<p>
+His dark hair was damp from the rain.
+</p>
+<p>
+His jacket was soaked.
+</p>
+<p>
+And somehow he was smiling.
+</p>
+<p>
+Again.
+</p>
+<p>
+That stupid smile.
+</p>
+<p>
+The one Do-hyun couldn't stop noticing.
+</p>
+<p>
+Seo-yul lifted a hand.
+</p>
+<p>
+"You're still here?"
+</p>
+<p>
+The question was simple.
+</p>
+<p>
+Yet somehow Do-hyun forgot every response he'd ever learned.
+</p>
+<p>
+Because all he could think about was the fact that Seo-yul had come back.
+</p>
+<p>
+"Obviously."
+</p>
+<p>
+Seo-yul laughed.
+</p>
+<p>
+The sound was warm.
+Far warmer than the coffee machines humming behind the counter.
+</p>
+<p>
+And for reasons Do-hyun refused to examine too closely, hearing that laugh again made the rainy night feel a little less lonely.
+</p>
 </div>
-<div class="card">
-<h2>❤️ Like This Chapter</h2>
-<p id="likes">❤️ Likes: 52</p>
-<button onclick="addLike()">
-❤️ Like Chapter
-</button>
-</div>
-<div class="card">
-<h2>💬 Comments</h2>
-<p><b>MoonReader:</b> Loved this chapter! 💜</p>
-<p><b>BookFan:</b> Can't wait for Chapter 2 😭</p>
-<textarea id="commentBox" placeholder="Write a comment..."></textarea>
-<button onclick="postComment()">
-💬 Post Comment
-</button>
-<div id="comments"></div>
-</div>
-<div class="card">
-<h2>⚙️ Reader Settings</h2>
-<button onclick="smallText()">
-🔤 Small Text
-</button>
-<button onclick="normalText()">
-📖 Normal Text
-</button>
-<button onclick="largeText()">
-🔍 Large Text
-</button>
-<button onclick="darkMode()">
-🌙 Dark Mode
-</button>
-<button onclick="lightMode()">
-☀️ Light Mode
-</button>
-</div>
-<script>
-function saveBookmark(){
-document.getElementById("bookmarkStatus").innerHTML =
-"✅ Bookmark Saved At Chapter 1";
-}
-function addLike(){
-let likes=document.getElementById("likes");
-let current=parseInt(likes.innerText.replace(/\D/g,''));
-current++;
-likes.innerText="❤️ Likes: " + current;
-}
-function postComment(){
-let text=document.getElementById("commentBox").value;
-if(text.trim()!=""){
-document.getElementById("comments").innerHTML +=
-"<p><b>Reader:</b> "+text+"</p>";
-document.getElementById("commentBox").value="";
-}
-}
-function smallText(){
-document.body.style.fontSize="14px";
-}
-function normalText(){
-document.body.style.fontSize="18px";
-}
-function largeText(){
-document.body.style.fontSize="24px";
-}
-function darkMode(){
-document.body.style.background="#0b1020";
-document.body.style.color="white";
-}
-function lightMode(){
-document.body.style.background="#ffffff";
-document.body.style.color="black";
-}
-</script>
-</body>
-</html>
