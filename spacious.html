@@ -165,6 +165,12 @@ Next Chapter →
 <button onclick="largeText()">
 🔍 Large Text
 </button>
+<button onclick="darkMode()">
+🌙 Dark Mode
+</button>
+<button onclick="lightMode()">
+☀️ Light Mode
+</button>
 </div>
 <script>
 function addToLibrary(){
@@ -193,6 +199,14 @@ document.body.style.fontSize="18px";
 }
 function largeText(){
 document.body.style.fontSize="24px";
+}
+function darkMode(){
+document.body.style.background="#0b1020";
+document.body.style.color="white";
+}
+function lightMode(){
+document.body.style.background="#ffffff";
+document.body.style.color="black";
 }
 </script>
 </body>
