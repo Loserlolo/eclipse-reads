@@ -77,6 +77,13 @@ display:block;
 width:100%;
 margin:10px 0;
 }
+textarea{
+width:100%;
+height:100px;
+border-radius:10px;
+padding:10px;
+box-sizing:border-box;
+}
 </style>
 </head>
 <body>
@@ -125,10 +132,20 @@ Next Chapter →
 </div>
 <div class="chapter">
 <h2>❤️ Like This Book</h2>
-<p id="likes">❤️ Likes: 0</p>
+<p id="likes">❤️ Likes: 52</p>
 <button onclick="addLike()">
 ❤️ Like Book
 </button>
+</div>
+<div class="chapter">
+<h2>💬 Comments</h2>
+<p><b>MoonReader:</b> Loved this chapter! 💜</p>
+<p><b>BookFan:</b> Can't wait for Chapter 2 😭</p>
+<textarea id="commentBox" placeholder="Write a comment..."></textarea>
+<button onclick="postComment()">
+💬 Post Comment
+</button>
+<div id="comments"></div>
 </div>
 <div class="settings">
 <h2>⚙️ Reader Settings</h2>
@@ -148,6 +165,14 @@ let likes=document.getElementById("likes");
 let current=parseInt(likes.innerText.replace(/\D/g,''));
 current++;
 likes.innerText="❤️ Likes: " + current;
+}
+function postComment(){
+let text=document.getElementById("commentBox").value;
+if(text.trim() !== ""){
+document.getElementById("comments").innerHTML +=
+"<p><b>Reader:</b> " + text + "</p>";
+document.getElementById("commentBox").value="";
+}
 }
 function smallText(){
 document.body.style.fontSize="14px";
