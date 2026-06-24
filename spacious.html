@@ -131,6 +131,15 @@ Next Chapter →
 </button>
 </div>
 <div class="chapter">
+<h2>🔖 Bookmark</h2>
+<p id="bookmarkStatus">
+📖 No Bookmark Saved
+</p>
+<button onclick="saveBookmark()">
+🔖 Save Bookmark
+</button>
+</div>
+<div class="chapter">
 <h2>❤️ Like This Book</h2>
 <p id="likes">❤️ Likes: 52</p>
 <button onclick="addLike()">
@@ -173,6 +182,10 @@ Next Chapter →
 </button>
 </div>
 <script>
+function saveBookmark(){
+document.getElementById("bookmarkStatus").innerHTML =
+"✅ Bookmark Saved At Chapter 1";
+}
 function addToLibrary(){
 document.getElementById("libraryStatus").innerHTML =
 "✅ Added To Library";
